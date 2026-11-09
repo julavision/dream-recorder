@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "title": "Residencial Aurora · Unit 702",
+  "subtitle": "2 bedrooms · 70 m² · demo rebuilt from listing photos",
+  "wallThickness": 0.2,
+  "roomHeight": 2.7,
+  "eyeHeight": 1.6,
+  "start": "living",
+  "credits": "Demo tour. Geometry and materials are procedural: nothing here was downloaded.",
+  "exterior": { "kind": "city", "sunAzimuth": 200, "sunElevation": 40 },
+  "rooms": [
+    {
+      "id": "living",
+      "name": "Living room",
+      "origin": [0, 0],
+      "size": [5, 4.4],
+      "area": 22,
+      "entry": [0.8, 3.6],
+      "entryHeading": 35,
+      "floor": { "kind": "wood", "color": "#9c7a55", "accent": "#6e4f33" },
+      "walls": { "kind": "plaster", "color": "#ece7df" },
+      "wallOverrides": { "west": { "kind": "paint", "color": "#3b4a5a" } },
+      "openings": [
+        { "type": "window", "wall": "north", "at": 1.3, "width": 1.6, "height": 1.5, "sill": 0.9 },
+        { "type": "window", "wall": "north", "at": 3.7, "width": 1.6, "height": 1.5, "sill": 0.9 },
+        { "type": "passage", "wall": "east", "at": 2.2, "width": 2.4, "height": 2.3 },
+        { "type": "door", "wall": "south", "at": 4.3, "width": 0.9, "height": 2.1 }
+      ],
+      "furniture": [
+        { "kind": "tvUnit", "at": [0.25, 2.6], "rotation": 90, "options": { "width": 1.8, "color": "#2c2622" } },
+        { "kind": "artwork", "at": [0.02, 1.0], "rotation": 90, "options": { "width": 0.8, "height": 0.6, "y": 1.7, "color": "#c9a24a", "accent": "#3b4a5a" } },
+        { "kind": "rug", "at": [1.9, 2.6], "options": { "width": 2.2, "depth": 2.0, "color": "#b7a58c", "accent": "#a4917a" } },
+        { "kind": "sofa", "at": [3.2, 2.6], "rotation": 270, "options": { "width": 2.2, "color": "#7f8781", "cushion": "#8f968f" } },
+        { "kind": "coffeeTable", "at": [1.7, 2.6], "options": { "width": 1.0, "depth": 0.55, "color": "#4a3a2e" } },
+        { "kind": "armchair", "at": [1.0, 1.1], "rotation": 200, "options": { "color": "#c9b7a0" } },
+        { "kind": "diningTable", "at": [3.9, 1.1], "options": { "width": 1.4, "depth": 0.8, "seats": 4, "color": "#6b5240", "chair": "#2f2f33" } },
+        { "kind": "bookshelf", "at": [1.0, 4.22], "rotation": 180, "options": { "width": 1.0, "height": 2.0, "color": "#5e4a3a" } },
+        { "kind": "floorLamp", "at": [4.6, 3.9] },
+        { "kind": "plant", "at": [0.4, 4.0] },
+        { "kind": "artwork", "at": [2.6, 4.38], "rotation": 180, "options": { "width": 1.2, "height": 0.8, "y": 1.7, "color": "#b65a3c", "accent": "#efe1c4" } },
+        { "kind": "curtain", "at": [1.3, 0.08], "options": { "width": 2.0, "height": 2.55, "color": "#d9d3c7" } },
+        { "kind": "curtain", "at": [3.7, 0.08], "options": { "width": 2.0, "height": 2.55, "color": "#d9d3c7" } }
+      ],
+      "hotspots": [
+        { "id": "living-main", "title": "Open-plan living", "body": "Double-aspect living area with two north-facing windows and an open passage to the kitchen. Engineered oak floor, painted feature wall for the media unit.", "at": [2.4, 1.5, 1.8] },
+        { "id": "living-dining", "title": "Dining corner", "body": "Four-seat dining table by the window, within reach of the kitchen pass-through.", "at": [3.9, 1.4, 1.9] }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "origin": [5.2, 0],
+      "size": [3, 4.4],
+      "area": 13.2,
+      "entry": [0.6, 2.2],
+      "entryHeading": 90,
+      "floor": { "kind": "tile", "color": "#d9d4cb", "accent": "#b9b3a8", "scale": 0.6 },
+      "walls": { "kind": "plaster", "color": "#f0ece4" },
+      "openings": [
+        { "type": "passage", "wall": "west", "at": 2.2, "width": 2.4, "height": 2.3 },
+        { "type": "window", "wall": "north", "at": 1.5, "width": 1.4, "height": 1.3, "sill": 1.1 },
+        { "type": "window", "wall": "east", "at": 2.2, "width": 1.2, "height": 1.1, "sill": 1.2 }
+      ],
+      "furniture": [
+        { "kind": "kitchenCounter", "at": [2.7, 2.3], "rotation": 270, "options": { "width": 2.8, "color": "#2f3338", "top": "#d8d2c6", "uppers": false, "splash": "#e9e3d6" } },
+        { "kind": "fridge", "at": [2.64, 0.42], "rotation": 270, "options": { "color": "#d7d9dc" } },
+        { "kind": "kitchenCounter", "at": [1.2, 4.1], "rotation": 180, "options": { "width": 2.2, "color": "#2f3338", "top": "#d8d2c6", "uppers": true, "splashback": true } },
+        { "kind": "washingMachine", "at": [0.4, 0.4], "rotation": 180 },
+        { "kind": "plant", "at": [0.35, 1.3], "options": { "color": "#4a8a4e" } }
+      ],
+      "hotspots": [
+        { "id": "kitchen-main", "title": "Kitchen", "body": "L-shaped kitchen in charcoal matte fronts with a stone-effect worktop, integrated hob and sink under the east window, tall fridge, and a laundry nook.", "at": [1.5, 1.4, 1.6] }
+      ]
+    },
+    {
+      "id": "hall",
+      "name": "Hallway",
+      "origin": [0, 4.6],
+      "size": [8.2, 1.2],
+      "area": 9.8,
+      "entry": [4.3, 0.6],
+      "entryHeading": 270,
+      "lights": [[1.6, 0.6], [4.3, 0.6], [6.8, 0.6]],
+      "floor": { "kind": "wood", "color": "#9c7a55", "accent": "#6e4f33" },
+      "walls": { "kind": "plaster", "color": "#e9e4db" },
+      "openings": [
+        { "type": "door", "wall": "north", "at": 4.3, "width": 0.9, "height": 2.1, "leaf": true },
+        { "type": "door", "wall": "south", "at": 1.7, "width": 0.9, "height": 2.1, "leaf": true },
+        { "type": "door", "wall": "south", "at": 5.1, "width": 0.8, "height": 2.1, "leaf": true },
+        { "type": "door", "wall": "south", "at": 6.4, "width": 0.9, "height": 2.1, "leaf": true }
+      ],
+      "furniture": [
+        { "kind": "sideboard", "at": [2.9, 0.24], "options": { "width": 1.2, "color": "#6a5542" } },
+        { "kind": "artwork", "at": [7.4, 0.02], "options": { "width": 0.7, "height": 0.9, "y": 1.75, "color": "#2f4858", "accent": "#d9c9a3" } },
+        { "kind": "artwork", "at": [0.8, 0.02], "options": { "width": 0.9, "height": 0.6, "y": 1.65, "color": "#8a9a8b", "accent": "#efe1c4" } }
+      ]
+    },
+    {
+      "id": "bedroom",
+      "name": "Master bedroom",
+      "origin": [0, 6],
+      "size": [3.4, 3.4],
+      "area": 11.6,
+      "entry": [1.7, 0.6],
+      "entryHeading": 200,
+      "floor": { "kind": "wood", "color": "#b08a63", "accent": "#86633f" },
+      "walls": { "kind": "plaster", "color": "#efe9e1" },
+      "wallOverrides": { "west": { "kind": "paint", "color": "#8a9a8b" } },
+      "openings": [
+        { "type": "door", "wall": "north", "at": 1.7, "width": 0.9, "height": 2.1 },
+        { "type": "window", "wall": "west", "at": 1.7, "width": 1.6, "height": 1.5, "sill": 0.9 },
+        { "type": "window", "wall": "south", "at": 1.7, "width": 1.6, "height": 1.5, "sill": 0.9 }
+      ],
+      "furniture": [
+        { "kind": "rug", "at": [1.6, 2.1], "options": { "width": 2.6, "depth": 2.0, "color": "#cfc6b8", "accent": "#bdb3a4" } },
+        { "kind": "bed", "at": [1.15, 2.1], "rotation": 90, "options": { "width": 1.6, "length": 2.0, "frame": "#4a3a30", "duvet": "#c9ccd3", "pillow": "#ffffff" } },
+        { "kind": "nightstand", "at": [0.35, 0.95], "options": { "color": "#4a3a30" } },
+        { "kind": "nightstand", "at": [0.35, 3.15], "options": { "color": "#4a3a30" } },
+        { "kind": "wardrobe", "at": [3.1, 1.9], "rotation": 270, "options": { "width": 1.8, "color": "#e8e4dc" } },
+        { "kind": "curtain", "at": [1.7, 3.32], "rotation": 180, "options": { "width": 2.0, "height": 2.55, "color": "#d9d3c7" } },
+        { "kind": "artwork", "at": [2.0, 0.02], "options": { "width": 0.8, "height": 0.6, "y": 1.7, "color": "#b65a3c", "accent": "#efe1c4" } }
+      ],
+      "hotspots": [
+        { "id": "bedroom-main", "title": "Master bedroom", "body": "Queen bed against a sage feature wall, built-in wardrobe, two windows (west and south). Fits a 1.6 m bed with nightstands on both sides.", "at": [1.9, 1.4, 1.5] }
+      ]
+    },
+    {
+      "id": "bathroom",
+      "name": "Bathroom",
+      "origin": [3.6, 6],
+      "size": [2, 2.4],
+      "area": 4.8,
+      "entry": [1.5, 0.75],
+      "entryHeading": 200,
+      "floor": { "kind": "tile", "color": "#aab2b8", "accent": "#8a9298", "scale": 0.5 },
+      "walls": { "kind": "tile", "color": "#e8eaec", "accent": "#cfd3d6", "scale": 0.6, "roughness": 0.3 },
+      "openings": [
+        { "type": "door", "wall": "north", "at": 1.5, "width": 0.8, "height": 2.1 },
+        { "type": "window", "wall": "south", "at": 0.8, "width": 0.8, "height": 0.6, "sill": 1.5 }
+      ],
+      "furniture": [
+        { "kind": "vanity", "at": [0.5, 0.26], "options": { "width": 0.9, "color": "#4a4038" } },
+        { "kind": "toilet", "at": [0.45, 2.05], "rotation": 180 },
+        { "kind": "shower", "at": [1.5, 1.9], "options": { "width": 0.9, "depth": 0.9 } }
+      ],
+      "hotspots": [
+        { "id": "bath-main", "title": "Bathroom", "body": "Fully tiled bathroom with a walk-in glass shower, wall-hung vanity and a small ventilation window.", "at": [1.0, 1.5, 1.1] }
+      ]
+    },
+    {
+      "id": "office",
+      "name": "Second bedroom",
+      "origin": [5.8, 6],
+      "size": [2.4, 3.4],
+      "area": 8.2,
+      "entry": [0.6, 0.6],
+      "entryHeading": 160,
+      "floor": { "kind": "wood", "color": "#9c7a55", "accent": "#6e4f33" },
+      "walls": { "kind": "plaster", "color": "#f1ece2" },
+      "openings": [
+        { "type": "door", "wall": "north", "at": 0.6, "width": 0.9, "height": 2.1 },
+        { "type": "window", "wall": "south", "at": 1.7, "width": 1.2, "height": 1.5, "sill": 0.9 },
+        { "type": "window", "wall": "east", "at": 1.6, "width": 1.0, "height": 1.3, "sill": 1.0 }
+      ],
+      "furniture": [
+        { "kind": "desk", "at": [1.75, 0.62], "options": { "width": 1.2, "color": "#d9cdb8", "chair": "#333338" } },
+        { "kind": "bookshelf", "at": [0.42, 3.25], "rotation": 180, "options": { "width": 0.8, "height": 2.0, "color": "#5e4a3a" } },
+        { "kind": "armchair", "at": [0.7, 2.2], "rotation": 90, "options": { "color": "#c9b7a0" } },
+        { "kind": "plant", "at": [2.1, 2.9] }
+      ],
+      "hotspots": [
+        { "id": "office-main", "title": "Second bedroom / office", "body": "Dual-aspect room set up as a home office. Takes a single bed and a desk, or a double bed with a compact wardrobe.", "at": [1.2, 1.4, 1.8] }
+      ]
+    }
+  ]
+}

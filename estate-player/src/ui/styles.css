@@ -1,0 +1,78 @@
+:root {
+  --bg: #0f1115;
+  --panel: rgba(16, 19, 26, 0.72);
+  --panel-border: rgba(255, 255, 255, 0.12);
+  --text: #f2f4f7;
+  --muted: #a9b1bd;
+  --accent: #78aaff;
+  --accent-ink: #0b1220;
+  --radius: 14px;
+  --font: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: var(--font); overflow: hidden; }
+#app { position: fixed; inset: 0; }
+#view { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: crosshair; outline: none; }
+#hud { position: absolute; inset: 0; pointer-events: none; padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); display: flex; flex-direction: column; justify-content: space-between; }
+#hud > * { pointer-events: none; }
+#hud button, #hud .minimap, #hud .hud-card, #hud .hud-start { pointer-events: auto; }
+
+.hud-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.hud-title, .hud-room { background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: var(--radius); padding: 10px 14px; }
+.hud-h1 { font-weight: 700; font-size: 15px; letter-spacing: 0.01em; }
+.hud-sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.hud-room { text-align: right; min-width: 120px; }
+.hud-room-name { font-weight: 600; font-size: 15px; }
+.hud-room-meta { color: var(--muted); font-size: 12px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+
+.hud-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.hud-chips { display: flex; flex-wrap: wrap; gap: 6px; max-width: 60vw; }
+.chip { font: inherit; font-size: 13px; color: var(--text); background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 999px; padding: 7px 12px; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+.chip:hover { border-color: rgba(255,255,255,0.35); }
+.chip.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+
+.hud-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.hud-tools { display: flex; gap: 6px; }
+.btn { font: inherit; font-size: 13px; color: var(--text); background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 10px; padding: 7px 12px; cursor: pointer; }
+.btn:hover { border-color: rgba(255,255,255,0.35); }
+.btn-primary { font: inherit; font-size: 15px; font-weight: 600; color: var(--accent-ink); background: var(--accent); border: 0; border-radius: 12px; padding: 12px 22px; cursor: pointer; margin-top: 18px; }
+.btn-primary:hover { filter: brightness(1.08); }
+.hud-map { background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: var(--radius); padding: 8px; }
+.minimap { display: block; cursor: pointer; }
+
+.hud-card { position: absolute; right: max(12px, env(safe-area-inset-right)); top: 50%; transform: translateY(-50%); width: min(340px, calc(100vw - 24px)); background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-radius: var(--radius); padding: 16px 18px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+.hud-card.hidden { display: none; }
+.card-close { position: absolute; top: 8px; right: 8px; font: inherit; font-size: 18px; line-height: 1; color: var(--muted); background: transparent; border: 0; cursor: pointer; padding: 6px 8px; }
+.card-title { font-weight: 700; font-size: 16px; margin-right: 28px; }
+.card-body { color: var(--muted); font-size: 13.5px; line-height: 1.5; margin-top: 8px; }
+.card-photo { display: block; width: 100%; border-radius: 10px; margin-top: 12px; }
+.card-caption { color: var(--muted); font-size: 11px; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.hud-hint { position: absolute; left: 50%; bottom: 18%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--panel-border); border-radius: 999px; padding: 6px 12px; font-size: 13px; opacity: 0; transition: opacity 0.15s; white-space: nowrap; }
+.hud-hint.visible { opacity: 1; }
+
+.hud-start { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at center, rgba(15,17,21,0.55), rgba(15,17,21,0.85)); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); cursor: pointer; }
+.hud-start.hidden { display: none; }
+.hud-start-panel { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 20px; padding: 28px 32px; max-width: min(520px, calc(100vw - 32px)); text-align: center; cursor: default; }
+.hud-start-title { font-size: 26px; font-weight: 800; letter-spacing: -0.01em; }
+.hud-start-sub { color: var(--muted); margin-top: 6px; font-size: 14px; }
+.hud-help { margin-top: 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.hud-help b { color: var(--text); background: rgba(255,255,255,0.08); border: 1px solid var(--panel-border); border-radius: 6px; padding: 1px 6px; font-weight: 600; }
+.hud-credits { margin-top: 16px; color: var(--muted); font-size: 11px; }
+
+.joystick { position: absolute; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); display: none; pointer-events: none; }
+.joystick.active { display: block; }
+.joystick-knob { position: absolute; left: 50%; top: 50%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; background: rgba(255,255,255,0.75); }
+
+.hud-error { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; color: var(--muted); font-size: 14px; pointer-events: auto; }
+.hud-error code { color: var(--text); }
+
+@media (max-width: 640px) {
+  .hud-h1 { font-size: 13px; }
+  .hud-sub { display: none; }
+  .hud-room-name { font-size: 13px; }
+  .hud-chips { max-width: 50vw; }
+  .chip { font-size: 12px; padding: 6px 10px; }
+  .hud-tools .btn { font-size: 12px; padding: 6px 9px; }
+}
